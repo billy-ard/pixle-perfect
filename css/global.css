@@ -1,0 +1,22 @@
+@font-face {
+  font-family: Bentham;
+  src: url("../assets/fonts/Bentham-Regular.ttf");
+}
+@font-face {
+  font-family: Raleway;
+  src: url("../assets/fonts/raleway/Raleway-VariableFont_wght.ttf");
+}
+.btn_gold {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: white;
+  border: 1px solid #ca8f48;
+  color: #ca8f48;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: "Raleway", sans-sherif;
+  font-weight: 700;
+  word-wrap: break-word;
+}/*# sourceMappingURL=global.css.map */

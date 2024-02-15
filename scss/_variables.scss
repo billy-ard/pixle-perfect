@@ -1,0 +1,20 @@
+@font-face {
+	font-family: Bentham;
+	src: url("../assets/fonts/bentham/Bentham-Regular.ttf");
+}
+
+@font-face {
+	font-family: Raleway;
+	src: url("../assets/fonts/raleway/Raleway-Regular.ttf");
+}
+
+$gray: #e5e5e5;
+$gold: #ca8f48;
+$white: #fff;
+$black: #333333;
+
+$bentham: "Bentham", sans-sherif;
+$raleway: "Raleway", sans-sherif;
+
+$normal: 0;
+$bold: 500;

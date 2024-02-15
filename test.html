@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			.container {
+				position: relative;
+				width: 300px; /* Adjust width as needed */
+				margin: auto; /* Center the container */
+				border: 2px solid #333; /* Border style */
+				overflow: hidden; /* Hide overflowing triangle */
+			}
+
+			.triangle {
+				content: "";
+				position: absolute;
+				top: -10px; /* Adjust position as needed */
+				left: 50%;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 10px 10px 10px; /* Adjust size of the triangle */
+				border-color: transparent transparent #333 transparent; /* Triangle color and border color */
+			}
+
+			.content {
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="triangle"></div>
+			<div class="content">
+				<!-- Your content goes here -->
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
+			</div>
+		</div>
+	</body>
+</html>

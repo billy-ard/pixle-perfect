@@ -1,0 +1,388 @@
+@import "./reset";
+@import "./variables";
+@import "./global";
+@import "./breakpoint";
+@import "./mixins";
+
+.center {
+	display: flex;
+	justify-content: center;
+}
+.wrapper {
+	margin: auto;
+
+	@include sm {
+		min-width: 360px;
+		max-width: 768px;
+		margin: 24px 16px;
+	}
+	@include lg {
+		margin: auto;
+		padding: 32px 64px;
+		max-width: 1152px;
+	}
+}
+
+.dropdown {
+	width: 160px;
+	padding: 8px 12px;
+	border: 1px solid $gray;
+}
+
+.center {
+	text-align: center;
+}
+
+.navlist {
+	list-style: none;
+	display: flex;
+}
+
+.navlist li:not(:last-child) {
+	border-right: 1px solid $black;
+}
+
+.navlist li {
+	padding: 0 5px;
+}
+
+.image-banner {
+	width: 100%;
+	margin-top: 16px;
+}
+
+.collection__header {
+	@include sm {
+		font-family: $raleway;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 19px;
+		letter-spacing: 0em;
+		text-align: left;
+		margin: 16px 0;
+	}
+}
+
+.filter__menu {
+	display: flex;
+	gap: 8px;
+}
+
+.filter__button {
+	width: 160px;
+	padding: 8px 12px;
+	border: 1px solid $gray;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.filter__dropdown {
+	position: absolute;
+	background-color: white;
+	width: 100%;
+	flex-direction: column;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	display: none;
+
+	@include lg {
+		position: relative;
+		display: flex;
+		width: 237px;
+		margin-right: 24px;
+	}
+}
+
+main {
+	display: flex;
+	width: auto;
+}
+
+.filter__header {
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	gap: 120px;
+	padding: 18px;
+	border-bottom: 1px solid $gray;
+	height: 18px;
+}
+
+.filter__header h2 {
+	font-family: $raleway;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+.filter__header img {
+	width: 24px;
+	height: 24px;
+	justify-content: left;
+}
+
+.filter__body {
+	padding: 16px;
+	@include lg {
+		padding: 0px;
+	}
+}
+
+.filter__body h3 {
+	font-family: $raleway;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.nav__header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.buttonCheckbox {
+	margin-right: 8px;
+	accent-color: $gold;
+	color: white;
+	border: 3px solid $white;
+}
+
+.collection__nav {
+	margin-top: 24px;
+}
+
+.collection__nav li {
+	margin-top: 12px;
+	margin-left: 16px;
+	margin-bottom: 24px;
+	font-family: $raleway;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 16px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.price__range {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 16px;
+}
+
+.price__body input[type="range"] {
+	width: 100%;
+}
+
+.color__body {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.color__body img {
+	// margin-right: 20px;
+	// margin-bottom: 24px;
+}
+.filter__footer {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+	border-top: 1px solid $gray;
+	padding: 12px;
+
+	@include lg {
+		display: none;
+	}
+}
+.reset__buton {
+	width: 160px;
+	height: 40px;
+	background-color: $white;
+	color: $gold;
+	border: 1px solid $gold;
+}
+
+.apply_button {
+	width: 160px;
+	height: 40px;
+	background-color: $gold;
+	color: $white;
+	border: 1px solid $gold;
+}
+
+.collection__content {
+	width: 100%;
+	margin-top: 16px;
+}
+
+.content__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 16px;
+
+	@include lg {
+		gap: 16px;
+	}
+}
+
+.content__count {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+.content__item {
+	margin-bottom: 16px;
+	width: 160px;
+	height: 289px;
+
+	@include lg {
+		width: 244px;
+		height: 400px;
+	}
+}
+
+.content__item img {
+	width: 100%;
+}
+
+.item__image {
+	position: relative;
+}
+
+.item__image img {
+	width: 160px;
+	height: 213px;
+
+	@include lg {
+		width: 244px;
+		height: 325px;
+	}
+}
+
+.content__type {
+	position: absolute;
+	bottom: 10px;
+	background-color: #82828280;
+	padding: 2px 8px;
+	opacity: 0.9;
+	border-radius: 25px;
+	color: $white;
+	font-family: $raleway;
+	font-size: 10px;
+	font-weight: 600;
+	line-height: 12px;
+	letter-spacing: 0em;
+	text-align: center;
+	margin-left: 8px;
+}
+
+.content__title {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.content__desc {
+	width: auto;
+	margin: 12px 8px;
+}
+
+.content__discount {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 4px 4px 12px 4px;
+	background-color: #cd5b63;
+	border-radius: 8px;
+	margin-right: 8px;
+	width: 28px;
+	height: 42px;
+}
+
+.content__discount p {
+	font-family: $raleway;
+	font-size: 10px;
+	font-weight: 600;
+	line-height: 15px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: white;
+}
+
+.content__discount::before,
+.content__discount::after {
+	/* This is required to be allowed to display the
+     pseudo-elements, event if the value is an empty
+     string */
+	content: "";
+
+	/* We position our pseudo-elements on the left and
+     right sides of the box, but always at the bottom */
+	position: absolute;
+	bottom: 0;
+
+	/* This makes sure our pseudo-elements will be below
+     the box content whatever happens. */
+	z-index: -1;
+
+	background-color: #a4c9cf;
+	border-radius: 100%;
+}
+
+.price-box {
+	margin-top: 8px;
+}
+
+.price {
+	font-family: $raleway;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.before-price {
+	font-family: $raleway;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 14px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: $gray;
+	text-decoration: line-through;
+}
+
+.content__nav {
+	display: flex;
+	gap: 12px;
+	justify-content: end;
+}
+
+.content__button {
+	background-color: transparent;
+	width: 36px;
+	height: 36px;
+	border: 1px solid $gold;
+	color: $gold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content__button img {
+	width: 24px;
+	height: 24px;
+}
