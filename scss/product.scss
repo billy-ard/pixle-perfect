@@ -23,6 +23,9 @@
 	}
 }
 
+header{
+	margin-bottom: 24px;
+}
 .dropdown {
 	width: 160px;
 	padding: 8px 12px;
@@ -51,21 +54,43 @@
 	margin-top: 16px;
 }
 
-.collection__header {
+.collection__heading {
 	@include sm {
 		font-family: $raleway;
-		font-size: 16px;
+		font-size: 20px;
 		font-weight: 700;
-		line-height: 19px;
+		line-height: 23px;
 		letter-spacing: 0em;
-		text-align: left;
-		margin: 16px 0;
+		text-align: left;	
+		margin:33px 0;	
+	}
+}
+.body__header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.sort__desktop{
+
+	@include sm{
+		display: none;
+	}
+	@include lg{
+		display: flex;
 	}
 }
 
+.sort__desktop span{
+	margin-right:16px;
+}
 .filter__menu {
 	display: flex;
 	gap: 8px;
+
+	@include lg{
+		display: none;
+	}
 }
 
 .filter__button {
@@ -87,6 +112,8 @@
 	z-index: 5;
 	display: none;
 
+	padding-bottom: 50px;
+
 	@include lg {
 		position: relative;
 		display: flex;
@@ -105,8 +132,13 @@ main {
 	flex-direction: row;
 	justify-content: right;
 	gap: 120px;
-	padding: 18px;
 	border-bottom: 1px solid $gray;
+	padding: 18px;
+	@include lg{
+		padding:0;
+		border:none;
+		margin:10px 0 12px 0;
+	}
 	height: 18px;
 }
 
@@ -119,10 +151,19 @@ main {
 	text-align: center;
 }
 
-.filter__header img {
+.filter__button--mobile {
 	width: 24px;
 	height: 24px;
 	justify-content: left;
+	display: block;
+	@include lg{display: none;}
+}
+
+.filter__button--desktop {
+	justify-content: left;
+	color:$gold;
+	@include sm{display: none;}
+	@include lg{display: block;}
 }
 
 .filter__body {
@@ -154,7 +195,12 @@ main {
 }
 
 .collection__nav {
-	margin-top: 24px;
+	margin-bottom: 24px;
+
+	@include lg{
+		border-top:1px solid $gray;
+		padding-top: 16px;
+	}
 }
 
 .collection__nav li {
@@ -173,6 +219,21 @@ main {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 16px;
+
+	@include lg{
+		font-family: $raleway;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 14px;
+		letter-spacing: 0em;
+		text-align: right;
+		margin-bottom: 8px;
+		margin-top:12px;
+	}
+}
+
+.number__slider{
+	width: 100%;
 }
 
 .price__body input[type="range"] {
@@ -182,8 +243,32 @@ main {
 .color__body {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 20px;
+	gap: 10px;
+	margin-top:12px;
 }
+
+#color__1{
+	accent-color: #000000;
+}
+
+#color__2{
+	accent-color: #8C8C8C;
+
+}
+
+#color__3{
+	width: 50px;
+	height: 50px;
+	background: linear-gradient(0deg, #F8F9FA, #F8F9FA),
+	linear-gradient(90deg, #E1CA80 0%, #FFFFFF 100%);
+	
+}
+
+.color__radio{
+	width: 28px;
+	height: 28px;
+}
+
 
 .color__body img {
 	// margin-right: 20px;
@@ -237,6 +322,9 @@ main {
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
+	@include lg{
+		display: none;
+	}
 }
 .content__item {
 	margin-bottom: 16px;
@@ -251,6 +339,12 @@ main {
 
 .content__item img {
 	width: 100%;
+}
+
+.desktop__only{
+	@include sm{
+		display: none;
+	}
 }
 
 .item__image {
@@ -293,6 +387,18 @@ main {
 .content__desc {
 	width: auto;
 	margin: 12px 8px;
+}
+
+.content__title{
+	@include lg{
+		font-family: $raleway;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 16px;
+		letter-spacing: 0em;
+		text-align: left;
+
+	}
 }
 
 .content__discount {
@@ -343,6 +449,11 @@ main {
 
 .price-box {
 	margin-top: 8px;
+
+	@include lg{
+		display: flex;
+		align-items: center;
+	}
 }
 
 .price {
@@ -352,9 +463,19 @@ main {
 	line-height: 16px;
 	letter-spacing: 0em;
 	text-align: left;
+
+	@include lg{
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 19px;
+		letter-spacing: 0em;
+		text-align: left;
+
+		margin-right:8px;
+	}
 }
 
-.before-price {
+.before__price {
 	font-family: $raleway;
 	font-size: 12px;
 	font-weight: 500;
@@ -363,6 +484,11 @@ main {
 	text-align: left;
 	color: $gray;
 	text-decoration: line-through;
+
+	@include lg{
+		font-size: 14px;
+		line-height: 16px;
+	}
 }
 
 .content__nav {
@@ -380,6 +506,26 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.page__button{
+	background-color: transparent;
+	width: 36px;
+	height: 36px;
+	border: 1px solid $gray;
+	color: $black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include sm{
+		display: none;
+	}
+}
+
+.page__button:hover{
+	background-color: $gold;
+	color:white
 }
 
 .content__button img {

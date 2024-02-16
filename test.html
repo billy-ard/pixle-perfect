@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<style>
-			.container {
-				position: relative;
-				width: 300px; /* Adjust width as needed */
-				margin: auto; /* Center the container */
-				border: 2px solid #333; /* Border style */
-				overflow: hidden; /* Hide overflowing triangle */
-			}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #4D29A2 5.21%, #D23745 26.56%, #DF6748 52.08%, #EB9A4F 80.73%, #F9E057 100%);
 
-			.triangle {
-				content: "";
-				position: absolute;
-				top: -10px; /* Adjust position as needed */
-				left: 50%;
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 0 10px 10px 10px; /* Adjust size of the triangle */
-				border-color: transparent transparent #333 transparent; /* Triangle color and border color */
-			}
+            /* Add any other styles or properties as needed */
+        }
 
-			.content {
-				padding: 20px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="triangle"></div>
-			<div class="content">
-				<!-- Your content goes here -->
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
-			</div>
-		</div>
-	</body>
+        /* Additional styles for content */
+        .content {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <h1>Welcome to My Website</h1>
+    <p>This is a simple example of a webpage with a linear gradient background.</p>
+</div>
+
+</body>
 </html>

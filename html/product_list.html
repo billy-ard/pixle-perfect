@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link rel="stylesheet" href="../css/product.css" />
+		<link rel="stylesheet" href="../scss/product.css" />
 	</head>
 	<body>
 		<div class="wrapper">
@@ -17,10 +17,13 @@
 			</header>
 
 			<main>
-				<div class="filter__dropdown">
+				<div id="filter__dropdown" class="filter__dropdown">
 					<div class="filter__header">
 						<h2>Filter</h2>
-						<img src="../assets/img/icon/x__icon.svg" />
+						<div>
+						<img id="filter__button--mobile" class="filter__button--mobile" src="../assets/img/icon/x__icon.svg" />
+						<span class="filter__button--desktop">Reset</span>
+					    </div>
 					</div>
 					<div class="filter__body">
 						<div class="collection__nav">
@@ -96,7 +99,7 @@
 									<span>13.479.000</span>
 								</div>
 
-								<input type="range" min="0" max="13479000" />
+								<img class="number__slider" src="../assets/img/image/slinder.svg">
 
 								<span class="center">234097 Produk</span>
 							</div>
@@ -170,11 +173,26 @@
 						<img
 							class="image-banner"
 							src="../assets/img/image/product__list__header__banner.svg" />
-						<h1>View All Collections</h1>
 					</div>
 					<div class="collection__body">
+						<div class="body__header">
+							<h1 class="collection__heading">View All Collections</h1>
+							
+							<div class="sort__desktop">
+								<div>
+									<span>234097 Produk | <b>Urut Berdasarkan</b></span>
+									<select class="dropdown">
+										<option value="">Best Selling</option>
+										<option value="">Highest Price</option>
+										<option value="">Lowest Price</option>
+										<option value="">Most Popular</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
 						<div class="filter__menu">
-							<div class="filter__button">
+							<div id="filter__button" class="filter__button">
 								<span>Filter</span>
 								<img src="../assets/img/icon/filter__icon.svg" />
 							</div>
@@ -198,10 +216,10 @@
 										</div>
 									</div>
 									<div class="content__desc">
-										<p>Circular Link Drop Earring</p>
+										<p class="content__title">Circular Link Drop Earrings - Gold</p>
 										<div class="price-box">
 											<p class="price">Rp. 104.300</p>
-											<p class="before-price">Rp. 104.300</p>
+											<p class="before__price">Rp. 104.300</p>
 										</div>
 									</div>
 								</div>
@@ -228,10 +246,10 @@
 										</div>
 									</div>
 									<div class="content__desc">
-										<p>Circular Link Drop Earring</p>
+										<p class="content__title">Circular Link Drop Earrings - Gold</p>
 										<div class="price-box">
 											<p class="price">Rp. 104.300</p>
-											<p class="before-price">Rp. 104.300</p>
+											<p class="before__price">Rp. 104.300</p>
 										</div>
 									</div>
 								</div>
@@ -254,7 +272,7 @@
 										</div>
 									</div>
 									<div class="content__desc">
-										<p>Pearl And Crystal Gold-T...</p>
+										<p class="content__title">Pearl And Crystal Gold-Tone Clip ...</p>
 										<div class="price-box">
 											<p class="price">Rp. 4.449.000</p>
 										</div>
@@ -272,13 +290,15 @@
 										</div>
 									</div>
 									<div class="content__desc">
-										<p>Gold-Tone Tubular Hoo...</p>
+										<p class="content__title">Gold-Tone Tubular Hoop Earrings</p>
 										<div class="price-box">
 											<p class="price">Rp. 1.463.000</p>
-											<p class="before-price">Rp. 2.090.000</p>
+											<p class="before__price">Rp. 2.090.000</p>
 										</div>
 									</div>
 								</div>
+
+								<div class="desktop__only">
 								<div class="content__item">
 									<div class="item__image">
 										<div class="content__discount">
@@ -291,10 +311,10 @@
 										</div>
 									</div>
 									<div class="content__desc">
-										<p>Circular Link Drop Earring</p>
+										<p class="content__title">Circular Link Drop Earrings - Gold</p>
 										<div class="price-box">
 											<p class="price">Rp. 104.300</p>
-											<p class="before-price">Rp. 104.300</p>
+											<p class="before__price">Rp. 104.300</p>
 										</div>
 									</div>
 								</div>
@@ -321,10 +341,10 @@
 										</div>
 									</div>
 									<div class="content__desc">
-										<p>Circular Link Drop Earring</p>
+										<p class="content__title">Circular Link Drop Earrings - Gold</p>
 										<div class="price-box">
 											<p class="price">Rp. 104.300</p>
-											<p class="before-price">Rp. 104.300</p>
+											<p class="before__price">Rp. 104.300</p>
 										</div>
 									</div>
 								</div>
@@ -347,7 +367,7 @@
 										</div>
 									</div>
 									<div class="content__desc">
-										<p>Pearl And Crystal Gold-T...</p>
+										<p class="content__title">Pearl And Crystal Gold-Tone Clip ...</p>
 										<div class="price-box">
 											<p class="price">Rp. 4.449.000</p>
 										</div>
@@ -365,18 +385,28 @@
 										</div>
 									</div>
 									<div class="content__desc">
-										<p>Gold-Tone Tubular Hoo...</p>
+										<p class="content__title">Gold-Tone Tubular Hoop Earrings</p>
 										<div class="price-box">
 											<p class="price">Rp. 1.463.000</p>
-											<p class="before-price">Rp. 2.090.000</p>
+											<p class="before__price">Rp. 2.090.000</p>
 										</div>
 									</div>
 								</div>
+							</div>
 							</div>
 						</div>
 						<div class="content__nav">
 							<div class="content__button">
 								<img src="../assets/img/icon/back__icon.svg" />
+							</div>
+							<div class="page__button">
+								<span>1</span>
+							</div>
+							<div class="page__button">
+								<span>2</span>
+							</div>
+							<div class="page__button">
+								<span>3</span>
 							</div>
 							<div class="content__button">
 								<img src="../assets/img/icon/next__icon.svg" />
@@ -386,5 +416,6 @@
 				</section>
 			</main>
 		</div>
+		<script src="../javascript/product.js"></script>
 	</body>
 </html>
