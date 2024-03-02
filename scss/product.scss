@@ -4,6 +4,23 @@
 @import "./breakpoint";
 @import "./mixins";
 
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"]:checked + .radio-btn {
+	border-color: $gold; /* Change this to your desired color for checked radio button */
+}
+
+.radio-btn {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	border: 2px solid $white; /* Default border color for unchecked radio button */
+	cursor: pointer;
+}
+
 .center {
 	display: flex;
 	justify-content: center;
@@ -23,7 +40,7 @@
 	}
 }
 
-header{
+header {
 	margin-bottom: 24px;
 }
 .dropdown {
@@ -61,34 +78,33 @@ header{
 		font-weight: 700;
 		line-height: 23px;
 		letter-spacing: 0em;
-		text-align: left;	
-		margin:33px 0;	
+		text-align: left;
+		margin: 33px 0;
 	}
 }
-.body__header{
+.body__header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.sort__desktop{
-
-	@include sm{
+.sort__desktop {
+	@include sm {
 		display: none;
 	}
-	@include lg{
+	@include lg {
 		display: flex;
 	}
 }
 
-.sort__desktop span{
-	margin-right:16px;
+.sort__desktop span {
+	margin-right: 16px;
 }
 .filter__menu {
 	display: flex;
 	gap: 8px;
 
-	@include lg{
+	@include lg {
 		display: none;
 	}
 }
@@ -134,10 +150,11 @@ main {
 	gap: 120px;
 	border-bottom: 1px solid $gray;
 	padding: 18px;
-	@include lg{
-		padding:0;
-		border:none;
-		margin:10px 0 12px 0;
+	@include lg {
+		justify-content: space-between;
+		padding: 0;
+		border: none;
+		margin: 10px 0 12px 0;
 	}
 	height: 18px;
 }
@@ -156,19 +173,26 @@ main {
 	height: 24px;
 	justify-content: left;
 	display: block;
-	@include lg{display: none;}
+	@include lg {
+		display: none;
+	}
 }
 
 .filter__button--desktop {
 	justify-content: left;
-	color:$gold;
-	@include sm{display: none;}
-	@include lg{display: block;}
+	color: $gold;
+	@include sm {
+		display: none;
+	}
+	@include lg {
+		display: block;
+	}
 }
 
 .filter__body {
 	padding: 16px;
 	@include lg {
+		width: 237px;
 		padding: 0px;
 	}
 }
@@ -187,6 +211,40 @@ main {
 	justify-content: space-between;
 }
 
+.range-input {
+	position: relative;
+	margin-top: 18px;
+	margin-bottom: 25px;
+}
+.range-input input {
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	top: -7px;
+	background: $gold;
+	pointer-events: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.range-input input::-webkit-slider-thumb {
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	border: 3px solid $gold;
+	background-color: $gold;
+	pointer-events: auto;
+	-webkit-appearance: none;
+}
+.range-input input::-moz-range-thumb {
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	border: 3px solid #1b53c0;
+	background-color: #fff;
+	pointer-events: auto;
+	-moz-appearance: none;
+}
+
 .buttonCheckbox {
 	margin-right: 8px;
 	accent-color: $gold;
@@ -197,8 +255,8 @@ main {
 .collection__nav {
 	margin-bottom: 24px;
 
-	@include lg{
-		border-top:1px solid $gray;
+	@include lg {
+		border-top: 1px solid $gray;
 		padding-top: 16px;
 	}
 }
@@ -213,6 +271,11 @@ main {
 	line-height: 16px;
 	letter-spacing: 0em;
 	text-align: left;
+
+	@include lg {
+		margin-left: 0px;
+		margin-bottom: 12px;
+	}
 }
 
 .price__range {
@@ -220,7 +283,7 @@ main {
 	justify-content: space-between;
 	margin-bottom: 16px;
 
-	@include lg{
+	@include lg {
 		font-family: $raleway;
 		font-size: 12px;
 		font-weight: 600;
@@ -228,11 +291,11 @@ main {
 		letter-spacing: 0em;
 		text-align: right;
 		margin-bottom: 8px;
-		margin-top:12px;
+		margin-top: 12px;
 	}
 }
 
-.number__slider{
+.number__slider {
 	width: 100%;
 }
 
@@ -243,32 +306,29 @@ main {
 .color__body {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 10px;
-	margin-top:12px;
+	gap: 18px;
+	margin-top: 12px;
 }
 
-#color__1{
+#color__1 {
 	accent-color: #000000;
 }
 
-#color__2{
-	accent-color: #8C8C8C;
-
+#color__2 {
+	accent-color: #8c8c8c;
 }
 
-#color__3{
+#color__3 {
 	width: 50px;
 	height: 50px;
-	background: linear-gradient(0deg, #F8F9FA, #F8F9FA),
-	linear-gradient(90deg, #E1CA80 0%, #FFFFFF 100%);
-	
+	background: linear-gradient(0deg, #f8f9fa, #f8f9fa),
+		linear-gradient(90deg, #e1ca80 0%, #ffffff 100%);
 }
 
-.color__radio{
+.color__radio {
 	width: 28px;
 	height: 28px;
 }
-
 
 .color__body img {
 	// margin-right: 20px;
@@ -322,7 +382,7 @@ main {
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
-	@include lg{
+	@include lg {
 		display: none;
 	}
 }
@@ -341,9 +401,16 @@ main {
 	width: 100%;
 }
 
-.desktop__only{
-	@include sm{
+.desktop__only {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	@include sm {
 		display: none;
+	}
+	@include lg {
+		display: flex;
 	}
 }
 
@@ -389,15 +456,14 @@ main {
 	margin: 12px 8px;
 }
 
-.content__title{
-	@include lg{
+.content__title {
+	@include lg {
 		font-family: $raleway;
 		font-size: 14px;
 		font-weight: 500;
 		line-height: 16px;
 		letter-spacing: 0em;
 		text-align: left;
-
 	}
 }
 
@@ -415,6 +481,7 @@ main {
 	margin-right: 8px;
 	width: 28px;
 	height: 42px;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 81%, 0 100%);
 }
 
 .content__discount p {
@@ -427,30 +494,10 @@ main {
 	color: white;
 }
 
-.content__discount::before,
-.content__discount::after {
-	/* This is required to be allowed to display the
-     pseudo-elements, event if the value is an empty
-     string */
-	content: "";
-
-	/* We position our pseudo-elements on the left and
-     right sides of the box, but always at the bottom */
-	position: absolute;
-	bottom: 0;
-
-	/* This makes sure our pseudo-elements will be below
-     the box content whatever happens. */
-	z-index: -1;
-
-	background-color: #a4c9cf;
-	border-radius: 100%;
-}
-
 .price-box {
 	margin-top: 8px;
 
-	@include lg{
+	@include lg {
 		display: flex;
 		align-items: center;
 	}
@@ -464,14 +511,14 @@ main {
 	letter-spacing: 0em;
 	text-align: left;
 
-	@include lg{
+	@include lg {
 		font-size: 16px;
 		font-weight: 700;
 		line-height: 19px;
 		letter-spacing: 0em;
 		text-align: left;
 
-		margin-right:8px;
+		margin-right: 8px;
 	}
 }
 
@@ -485,7 +532,7 @@ main {
 	color: $gray;
 	text-decoration: line-through;
 
-	@include lg{
+	@include lg {
 		font-size: 14px;
 		line-height: 16px;
 	}
@@ -508,24 +555,26 @@ main {
 	align-items: center;
 }
 
-.page__button{
+.page__button {
 	background-color: transparent;
 	width: 36px;
 	height: 36px;
 	border: 1px solid $gray;
 	color: $black;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 
-	@include sm{
+	@include sm {
 		display: none;
+	}
+	@include lg {
+		display: flex;
 	}
 }
 
-.page__button:hover{
+.page__button:hover {
 	background-color: $gold;
-	color:white
+	color: white;
 }
 
 .content__button img {

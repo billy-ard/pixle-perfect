@@ -482,6 +482,32 @@ a {
   word-wrap: break-word;
 }
 
+span {
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio]:checked + .radio-btn {
+  border-color: #ca8f48; /* Change this to your desired color for checked radio button */
+}
+
+.radio-btn {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #fff; /* Default border color for unchecked radio button */
+  cursor: pointer;
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -503,6 +529,10 @@ a {
     padding: 32px 64px;
     max-width: 1152px;
   }
+}
+
+header {
+  margin-bottom: 24px;
 }
 
 .dropdown {
@@ -534,20 +564,46 @@ a {
 }
 
 @media (min-width: 320px) {
-  .collection__header {
+  .collection__heading {
     font-family: "Raleway", sans-sherif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
-    line-height: 19px;
+    line-height: 23px;
     letter-spacing: 0em;
     text-align: left;
-    margin: 16px 0;
+    margin: 33px 0;
   }
+}
+
+.body__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 320px) {
+  .sort__desktop {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .sort__desktop {
+    display: flex;
+  }
+}
+
+.sort__desktop span {
+  margin-right: 16px;
 }
 
 .filter__menu {
   display: flex;
   gap: 8px;
+}
+@media (min-width: 992px) {
+  .filter__menu {
+    display: none;
+  }
 }
 
 .filter__button {
@@ -568,6 +624,7 @@ a {
   left: 0;
   z-index: 5;
   display: none;
+  padding-bottom: 50px;
 }
 @media (min-width: 992px) {
   .filter__dropdown {
@@ -588,9 +645,17 @@ main {
   flex-direction: row;
   justify-content: right;
   gap: 120px;
-  padding: 18px;
   border-bottom: 1px solid #e5e5e5;
+  padding: 18px;
   height: 18px;
+}
+@media (min-width: 992px) {
+  .filter__header {
+    justify-content: space-between;
+    padding: 0;
+    border: none;
+    margin: 10px 0 12px 0;
+  }
 }
 
 .filter__header h2 {
@@ -602,10 +667,31 @@ main {
   text-align: center;
 }
 
-.filter__header img {
+.filter__button--mobile {
   width: 24px;
   height: 24px;
   justify-content: left;
+  display: block;
+}
+@media (min-width: 992px) {
+  .filter__button--mobile {
+    display: none;
+  }
+}
+
+.filter__button--desktop {
+  justify-content: left;
+  color: #ca8f48;
+}
+@media (min-width: 320px) {
+  .filter__button--desktop {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .filter__button--desktop {
+    display: block;
+  }
 }
 
 .filter__body {
@@ -613,6 +699,7 @@ main {
 }
 @media (min-width: 992px) {
   .filter__body {
+    width: 237px;
     padding: 0px;
   }
 }
@@ -631,6 +718,43 @@ main {
   justify-content: space-between;
 }
 
+.range-input {
+  position: relative;
+  margin-top: 18px;
+  margin-bottom: 25px;
+}
+
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -7px;
+  background: #ca8f48;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.range-input input::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 3px solid #ca8f48;
+  background-color: #ca8f48;
+  pointer-events: auto;
+  -webkit-appearance: none;
+}
+
+.range-input input::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 3px solid #1b53c0;
+  background-color: #fff;
+  pointer-events: auto;
+  -moz-appearance: none;
+}
+
 .buttonCheckbox {
   margin-right: 8px;
   accent-color: #ca8f48;
@@ -639,7 +763,13 @@ main {
 }
 
 .collection__nav {
-  margin-top: 24px;
+  margin-bottom: 24px;
+}
+@media (min-width: 992px) {
+  .collection__nav {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 16px;
+  }
 }
 
 .collection__nav li {
@@ -653,11 +783,33 @@ main {
   letter-spacing: 0em;
   text-align: left;
 }
+@media (min-width: 992px) {
+  .collection__nav li {
+    margin-left: 0px;
+    margin-bottom: 12px;
+  }
+}
 
 .price__range {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+}
+@media (min-width: 992px) {
+  .price__range {
+    font-family: "Raleway", sans-sherif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: right;
+    margin-bottom: 8px;
+    margin-top: 12px;
+  }
+}
+
+.number__slider {
+  width: 100%;
 }
 
 .price__body input[type=range] {
@@ -667,7 +819,27 @@ main {
 .color__body {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+#color__1 {
+  accent-color: #000000;
+}
+
+#color__2 {
+  accent-color: #8c8c8c;
+}
+
+#color__3 {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(0deg, #f8f9fa, #f8f9fa), linear-gradient(90deg, #e1ca80 0%, #ffffff 100%);
+}
+
+.color__radio {
+  width: 28px;
+  height: 28px;
 }
 
 .filter__footer {
@@ -722,6 +894,11 @@ main {
   display: flex;
   justify-content: center;
 }
+@media (min-width: 992px) {
+  .content__count {
+    display: none;
+  }
+}
 
 .content__item {
   margin-bottom: 16px;
@@ -737,6 +914,22 @@ main {
 
 .content__item img {
   width: 100%;
+}
+
+.desktop__only {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (min-width: 320px) {
+  .desktop__only {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .desktop__only {
+    display: flex;
+  }
 }
 
 .item__image {
@@ -782,6 +975,17 @@ main {
   margin: 12px 8px;
 }
 
+@media (min-width: 992px) {
+  .content__title {
+    font-family: "Raleway", sans-sherif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
 .content__discount {
   position: absolute;
   top: 0px;
@@ -796,6 +1000,7 @@ main {
   margin-right: 8px;
   width: 28px;
   height: 42px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 81%, 0 100%);
 }
 
 .content__discount p {
@@ -808,25 +1013,14 @@ main {
   color: white;
 }
 
-.content__discount::before,
-.content__discount::after {
-  /* This is required to be allowed to display the
-      pseudo-elements, event if the value is an empty
-      string */
-  content: "";
-  /* We position our pseudo-elements on the left and
-      right sides of the box, but always at the bottom */
-  position: absolute;
-  bottom: 0;
-  /* This makes sure our pseudo-elements will be below
-      the box content whatever happens. */
-  z-index: -1;
-  background-color: #a4c9cf;
-  border-radius: 100%;
-}
-
 .price-box {
   margin-top: 8px;
+}
+@media (min-width: 992px) {
+  .price-box {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .price {
@@ -837,8 +1031,18 @@ main {
   letter-spacing: 0em;
   text-align: left;
 }
+@media (min-width: 992px) {
+  .price {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 8px;
+  }
+}
 
-.before-price {
+.before__price {
   font-family: "Raleway", sans-sherif;
   font-size: 12px;
   font-weight: 500;
@@ -847,6 +1051,12 @@ main {
   text-align: left;
   color: #e5e5e5;
   text-decoration: line-through;
+}
+@media (min-width: 992px) {
+  .before__price {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .content__nav {
@@ -864,6 +1074,31 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.page__button {
+  background-color: transparent;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e5e5e5;
+  color: #333333;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 320px) {
+  .page__button {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .page__button {
+    display: flex;
+  }
+}
+
+.page__button:hover {
+  background-color: #ca8f48;
+  color: white;
 }
 
 .content__button img {

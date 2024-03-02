@@ -1,152 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail</title>
-</head>
-<body>
-    <header>
-        <div class="header__wrapper">
-            <div class="header__bar">
-                <div class="header__icon--left">
-                    <button class="invis-button" id="menu-icon">
-                        <img src="../assets/img/icon/menu-icon.svg" />
-                    </button>
-                </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Detail</title>
+		<link rel="stylesheet" href="../css/product_detail.css" />
+	</head>
+	<body>
+		<header>
+			<div class="header__wrapper">
+				<div class="header__bar">
+					<div class="header__icon--left">
+						<button class="invis-button" id="menu-icon">
+							<img src="../assets/img/icon/menu-icon.svg" />
+						</button>
+					</div>
 
-                <div class="header__logo">
-                    <h1>Artsy Collective</h1>
-                </div>
+					<div class="header__logo">
+						<h1>Artsy Collective</h1>
+					</div>
 
-                <div class="header__nav--web">
-                    <ul>
-                        <li class="nav__item">
-                            <a href="#">Collections</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#">Coco Crush</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#">High Jewelry</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#">Bridal</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#">Care & Services</a>
-                        </li>
-                    </ul>
-                </div>
+					<div class="header__nav--web">
+						<ul>
+							<li class="nav__item">
+								<a href="#">Collections</a>
+							</li>
+							<li class="nav__item">
+								<a href="#">Coco Crush</a>
+							</li>
+							<li class="nav__item">
+								<a href="#">High Jewelry</a>
+							</li>
+							<li class="nav__item">
+								<a href="#">Bridal</a>
+							</li>
+							<li class="nav__item">
+								<a href="#">Care & Services</a>
+							</li>
+						</ul>
+					</div>
 
-                <div class="header__icon--right">
-                    <img src="../assets/img/icon/user-icon.svg" />
-                    <img src="../assets/img/icon/shopping_card__icon.svg" />
-                </div>
-            </div>
+					<div class="header__icon--right">
+						<img src="../assets/img/icon/user-icon.svg" />
 
-            <div class="header__menu" id="header__menu">
-                <div class="header__menu--mobile" id="header__menu--mobile">
-                    <div class="header__menu--top">
-                        <h1>Artsy Collective</h1>
+						<div class="cart__container">
+							<img src="../assets/img/icon/shopping_card__icon.svg" />
+							<div id="cart__item__counter" class="cart__item__counter">
+								<span id="cart__counter">1</span>
+							</div>
+						</div>
+					</div>
+				</div>
 
-                        <button class="invis-button" id="close-icon">
-                            <img src="../assets/img/icon/x__icon.svg" />
-                        </button>
-                    </div>
-                    <div class="header__menu__content">
-                        <div class="menu__item">
-                            <div class="content--left">
-                                <h3>Collection</h3>
-                                <p>All Artsy’s fine jewelry</p>
-                            </div>
-                            <div class="content--right">
-                                <img src="../assets/img/image/header__menu__item--1.svg" />
-                            </div>
-                        </div>
-                        <div class="menu__item">
-                            <div class="content--left">
-                                <h3>Coco Crush</h3>
-                                <p>All Artsy’s fine jewelry</p>
-                            </div>
-                            <div class="content--right">
-                                <img src="../assets/img/image/header__menu__item--2.svg" />
-                            </div>
-                        </div>
-                        <div class="menu__item">
-                            <div class="content--left">
-                                <h3>High Jewelry</h3>
-                                <p>Artsy high jewelry signature</p>
-                            </div>
-                            <div class="content--right">
-                                <img src="../assets/img/image/header__menu__item--3.svg" />
-                            </div>
-                        </div>
-                        <div class="menu__item">
-                            <div class="content--left">
-                                <h3>Coco Crush</h3>
-                                <p>All Artsy’s fine jewelry</p>
-                            </div>
-                            <div class="content--right">
-                                <img src="../assets/img/image/header__menu__item--4.svg" />
-                            </div>
-                        </div>
-                        <div class="menu__item">
-                            <div class="content--left">
-                                <h3>Coco Crush</h3>
-                                <p>All Artsy’s fine jewelry</p>
-                            </div>
-                            <div class="content--right">
-                                <img src="../assets/img/image/header__menu__item--5.svg" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+				<div class="header__menu" id="header__menu">
+					<div class="header__menu--mobile" id="header__menu--mobile">
+						<div class="header__menu--top">
+							<h1>Artsy Collective</h1>
 
-                <div class="header__menu--desktop" id="header__menu--desktop">
-                    <div class="wrapper">
-                        <div class="menu__item--desktop">
-                            <h3>Shop By Categories</h3>
-                            <ul>
-                                <li><a href="#">View All</a></li>
-                                <li><a href="#">Rings</a></li>
-                                <li><a href="#">Bracelets</a></li>
-                                <li><a href="#">Necklaces</a></li>
-                                <li><a href="#">Earrings</a></li>
-                            </ul>
-                        </div>
-                        <div class="menu__item--desktop">
-                            <h3>Featured Collections</h3>
-                            <ul>
-                                <li><a href="#">Coco Crush</a></li>
-                                <li><a href="#">Camélia</a></li>
-                                <li><a href="#">Ultra</a></li>
-                                <li><a href="#">Comète</a></li>
-                                <li><a href="#">Ruban</a></li>
-                                <li><a href="#">Baroque</a></li>
-                                <li><a href="#">Soleil de Artsy</a></li>
-                            </ul>
-                        </div>
-                        <div class="menu__item--desktop">
-                            <div class="menu__image__collection">
-                                <div class="menu__image__item">
-                                    <img src="../assets/img/image/menu__item--1.svg" />
-                                    <span>Coco Crush Ring</span>
-                                </div>
-                                <div class="menu__image__item">
-                                    <img src="../assets/img/image/menu__item--2.svg" />
-                                    <span>Camélia Bracelet</span>
-                                </div>
-                                <div class="menu__image__item">
-                                    <img src="../assets/img/image/menu__item--3.svg" />
-                                    <span>Ruban Collection</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-</body>
+							<button class="invis-button" id="close-icon">
+								<img src="../assets/img/icon/x__icon.svg" />
+							</button>
+						</div>
+						<div class="header__menu__content">
+							<div class="menu__item">
+								<div class="content--left">
+									<h3>Collection</h3>
+									<p>All Artsy’s fine jewelry</p>
+								</div>
+								<div class="content--right">
+									<img src="../assets/img/image/header__menu__item--1.svg" />
+								</div>
+							</div>
+							<div class="menu__item">
+								<div class="content--left">
+									<h3>Coco Crush</h3>
+									<p>All Artsy’s fine jewelry</p>
+								</div>
+								<div class="content--right">
+									<img src="../assets/img/image/header__menu__item--2.svg" />
+								</div>
+							</div>
+							<div class="menu__item">
+								<div class="content--left">
+									<h3>High Jewelry</h3>
+									<p>Artsy high jewelry signature</p>
+								</div>
+								<div class="content--right">
+									<img src="../assets/img/image/header__menu__item--3.svg" />
+								</div>
+							</div>
+							<div class="menu__item">
+								<div class="content--left">
+									<h3>Coco Crush</h3>
+									<p>All Artsy’s fine jewelry</p>
+								</div>
+								<div class="content--right">
+									<img src="../assets/img/image/header__menu__item--4.svg" />
+								</div>
+							</div>
+							<div class="menu__item">
+								<div class="content--left">
+									<h3>Coco Crush</h3>
+									<p>All Artsy’s fine jewelry</p>
+								</div>
+								<div class="content--right">
+									<img src="../assets/img/image/header__menu__item--5.svg" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="header__menu--desktop" id="header__menu--desktop">
+						<div class="wrapper">
+							<div class="menu__item--desktop">
+								<h3>Shop By Categories</h3>
+								<ul>
+									<li><a href="#">View All</a></li>
+									<li><a href="#">Rings</a></li>
+									<li><a href="#">Bracelets</a></li>
+									<li><a href="#">Necklaces</a></li>
+									<li><a href="#">Earrings</a></li>
+								</ul>
+							</div>
+							<div class="menu__item--desktop">
+								<h3>Featured Collections</h3>
+								<ul>
+									<li><a href="#">Coco Crush</a></li>
+									<li><a href="#">Camélia</a></li>
+									<li><a href="#">Ultra</a></li>
+									<li><a href="#">Comète</a></li>
+									<li><a href="#">Ruban</a></li>
+									<li><a href="#">Baroque</a></li>
+									<li><a href="#">Soleil de Artsy</a></li>
+								</ul>
+							</div>
+							<div class="menu__item--desktop">
+								<div class="menu__image__collection">
+									<div class="menu__image__item">
+										<img src="../assets/img/image/menu__item--1.svg" />
+										<span>Coco Crush Ring</span>
+									</div>
+									<div class="menu__image__item">
+										<img src="../assets/img/image/menu__item--2.svg" />
+										<span>Camélia Bracelet</span>
+									</div>
+									<div class="menu__image__item">
+										<img src="../assets/img/image/menu__item--3.svg" />
+										<span>Ruban Collection</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div>
+				<div class="desktop breadcrumb">
+					<span>Home | Collections | <b>Pave Threader Earrings</b> </span>
+				</div>
+				<div class="wrapper">
+					<div class="image__box">
+						<div class="product__image">
+							<img
+								id="image-1"
+								class="slider__image"
+								src="../assets/img/image/product__detail_image--2.svg" />
+							<img
+								id="image-2"
+								class="current__image"
+								src="../assets/img/image/product__detail_image--1.svg" />
+							<img
+								id="image-3"
+								class="slider__image"
+								src="../assets/img/image/product__detail_image--3.svg" />
+
+							<img
+								id="back__button"
+								class="back__button"
+								src="../assets/img/icon/button__back.svg" />
+
+							<img
+								id="next__button"
+								class="next__button"
+								src="../assets/img/icon/button__next.svg" />
+						</div>
+						<div class="product__thumbnail--mini">
+							<img
+								src="../assets/img/image/collection__detail__thumbnail--1.svg" />
+							<img
+								src="../assets/img/image/collection__detail__thumbnail--2.svg" />
+							<img
+								src="../assets/img/image/collection__detail__thumbnail--3.svg" />
+						</div>
+					</div>
+
+					<div class="description">
+						<div class="product__detail">
+							<h3 class="product__title">Pave Threader Earrings</h3>
+							<div class="product__rating">
+								<img src="../assets/img/icon/star.svg" />
+								<img src="../assets/img/icon/star.svg" />
+								<img src="../assets/img/icon/star.svg" />
+								<img src="../assets/img/icon/star.svg" />
+								<img src="../assets/img/icon/star.svg" />
+							</div>
+							<span class="product__price">Rp. 104.300</span>
+							<div class="product__discount">
+								<div class="discount__percentage">
+									<span>30% Off</span>
+								</div>
+								<div class="before__price"><span>Rp. 135.590</span></div>
+							</div>
+						</div>
+
+						<div class="dropdown">
+							<div class="dropdown__header">
+								<h3>Description</h3>
+								<img
+									id="desc__btn"
+									class="dropdown__btn"
+									src="../assets/img/icon/chevron__up.svg" />
+							</div>
+							<div id="desc__body" class="dropdown__content">
+								<p>
+									Elevate your everyday look with these threader earrings
+									designed with pave crystals.
+								</p>
+								<br />
+								<p>Earring Drop Length: 1.32"</p>
+								<p>Earring Width: 0.11"</p>
+							</div>
+						</div>
+
+						<div class="dropdown">
+							<div class="dropdown__header">
+								<h3>Material</h3>
+								<img
+									id="material__btn"
+									class="dropdown__btn"
+									src="../assets/img/icon/chevron__up.svg" />
+							</div>
+							<div id="material__body" class="dropdown__content">
+								<div class="material__content">
+									<span class="material_type">Fabric</span>
+									<span>Metal 100%</span>
+								</div>
+								<div class="material__content">
+									<span class="material_type">Lining</span>
+									<span>Partial</span>
+								</div>
+								<div class="material__content">
+									<span class="material_type">Silhouette</span>
+									<span>Drop</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="dropdown">
+							<div class="dropdown__header">
+								<h3>Shipping & Returns</h3>
+								<img
+									id="ship__btn"
+									class="dropdown__btn"
+									src="../assets/img/icon/chevron__up.svg" />
+							</div>
+							<div id="ship__body" class="dropdown__content">
+								<div class="delivery__content">
+									<span>Standard Delivery</span>
+									<span>Within 6 - 9 working days</span>
+								</div>
+								<br />
+								<div class="delivery__content">
+									<span>Standard Delivery</span>
+									<span>Within 6 - 9 working days</span>
+								</div>
+								<br />
+								<p>
+									Find out more about our <u>Returns & Exchanges</u>. All orders
+									are currently shipped out from Indonesia
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="specification">
+						<div class="option_box">
+							<div class="desktop">
+								<div class="ori__product">
+									<img src="../assets/img/icon/ori__icon.svg" />
+									<span>100% Original Product</span>
+									<img src="../assets/img/icon/info__icon.svg" />
+								</div>
+							</div>
+
+							<div class="quantity">
+								<span>Set Your Qty:</span>
+								<div class="quantity__counter">
+									<div class="button">
+										<span>-</span>
+									</div>
+									<div class="button counter">
+										<span>1</span>
+									</div>
+									<div class="button">
+										<span>+</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="color">
+								<div>
+									<span>Pick Your Color:</span>
+									<span><b>GOLD</b></span>
+								</div>
+								<div class="color__body">
+									<label>
+										<input type="radio" name="color" value="color-1" />
+										<span
+											class="radio-btn"
+											style="
+												background: linear-gradient(
+													to right,
+													#ca8f48,
+													rgba(225, 202, 128, 1),
+													rgba(255, 255, 255, 1)
+												);
+											"></span>
+									</label>
+
+									<label>
+										<input type="radio" name="color" value="color-2" />
+										<span
+											class="radio-btn"
+											style="
+												background: linear-gradient(
+													to right,
+													rgba(204, 204, 203, 1),
+													rgba(255, 255, 255, 1)
+												);
+											"></span>
+									</label>
+								</div>
+							</div>
+
+							<div class="sub__total">
+								<span class="text">Subtotal:</span>
+								<span class="price">Rp. 104.300</span>
+							</div>
+
+							<div class="button_list">
+								<input
+									type="button"
+									id="add__to__cart"
+									class="gold__btn"
+									value="ADD TO CART" />
+								<input type="button" class="white__btn" value="ORDER NOW" />
+							</div>
+
+							<div class="mobile">
+								<div class="ori__product">
+									<img src="../assets/img/icon/ori__icon.svg" />
+									<span>100% Original Product</span>
+									<img src="../assets/img/icon/info__icon.svg" />
+								</div>
+							</div>
+						</div>
+
+						<div class="help__box">
+							<p class="title">Need help?</p>
+
+							<div class="content">
+								<p>Please go to the link here,</p>
+								<p>https://support.artsycollective.co.id/</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="popup" class="popup">
+					<div class="popup__bg"></div>
+					<div class="popup__box">
+						<div class="box__header">
+							<span>Item Added to Cart</span>
+							<img id="close_popup" src="../assets/img/icon/x__icon.svg" />
+						</div>
+						<div class="popup__body">
+							<img
+								class="small__thumbnail"
+								src="../assets/img/image/collection__detail__thumbnail--2.svg" />
+							<div class="item__body">
+								<div class="item__desc">
+									<span>Pave threader Earrings</span>
+									<span>x1</span>
+								</div>
+								<span class="item__price">Rp. 104.300</span>
+							</div>
+						</div>
+						<input
+							type="button"
+							class="gold__btn popup_btn"
+							value="View My Cart" />
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script src="../javascript/product_detail.js"></script>
+	</body>
 </html>

@@ -7,6 +7,8 @@
 		<link rel="stylesheet" href="../css/main.css" />
 	</head>
 	<body>
+		<div id="popup__bg" class="popup__bg"></div>
+
 		<header>
 			<div class="header__wrapper">
 				<div class="header__bar">
@@ -41,7 +43,7 @@
 					</div>
 
 					<div class="header__icon--right">
-						<img src="../assets/img/icon/user-icon.svg" />
+						<img id="user__btn" src="../assets/img/icon/user-icon.svg" />
 						<img src="../assets/img/icon/shopping_card__icon.svg" />
 					</div>
 				</div>
@@ -151,6 +153,223 @@
 		</header>
 
 		<main>
+			<div id="login__form" class="login__form">
+				<div class="header">
+					<span class="title">Welcome Back</span>
+					<img id="login__close" src="../assets/img/icon/x__icon.svg" />
+				</div>
+				<span class="center">Sign in with your email and password.</span>
+
+				<div class="login__input">
+					<form id="login__form" class="form__input">
+						<div class="input__box">
+							<p class="input__text">Email / Username</p>
+
+							<input
+								type="text"
+								class="input__field"
+								id="login__email"
+								name="email"
+								placeholder="ex: johndoe@email.com" />
+
+							<p id="login__email_error_msg" class="error__message"></p>
+						</div>
+
+						<div class="input__box">
+							<p class="input__text">Password</p>
+							<div class="password__container">
+								<input
+									type="password"
+									class="input__field"
+									id="login__password"
+									name="password"
+									placeholder="ex: ******" />
+								<img
+									class="show__hide__password"
+									src="../assets/img/icon/hide__icon.svg" />
+							</div>
+							<p id="login__password_error_msg" class="error__message"></p>
+							<a href="#" class="forgot_link">Forgot Password</a>
+						</div>
+
+						<div class="input__box__login">
+							<input type="submit" class="btn_gold" value="Login" />
+						</div>
+					</form>
+
+					<div class="link__new__customer">
+						<span>New Customer?</span>
+						<a id="register_popup" href="#">Sign Up</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="register__form" class="register__form">
+				<div class="header">
+					<span class="title">Create an Account</span>
+					<img id="register__close" src="../assets/img/icon/x__icon.svg" />
+				</div>
+				<span class="center">Save your information to check out faster</span>
+
+				<form>
+					<div class="register__input">
+						<div class="input__box">
+							<div class="flex">
+								<div class="input__box--half">
+									<p class="input__text">First Name</p>
+									<input
+										type="text"
+										class="input__field--half"
+										id="firstname"
+										placeholder="ex: john" />
+								</div>
+
+								<div class="input__box--half">
+									<p class="input__text">Last Name</p>
+									<input
+										type="text"
+										class="input__field--half"
+										id="lastname"
+										placeholder="ex: doe" />
+								</div>
+							</div>
+							<p class="error__message">First Name cannot contain numbers</p>
+						</div>
+
+						<div class="input__box">
+							<p class="input__text">Email / Username</p>
+							<input
+								type="text"
+								class="input__field"
+								id="username"
+								placeholder="ex: doe" />
+							<p class="error__message">Email is not valid</p>
+						</div>
+
+						<div class="input__box">
+							<p class="input__text">Contact Number</p>
+							<input
+								type="text"
+								class="input__field"
+								id="contact"
+								name="dob"
+								placeholder="ex: +62812 3456 7890" />
+							<p class="error__message">Contact Number already registered</p>
+						</div>
+
+						<div class="input__box">
+							<p class="input__text">Date of Birth</p>
+							<input
+								type="date"
+								class="input__field"
+								id="dob"
+								name="dob"
+								placeholder="ex: +62812 3456 7890" />
+							<p class="error__message">Date of Birth is not valid</p>
+						</div>
+
+						<div class="input__box">
+							<p class="input__text">Gender</p>
+							<div class="flex">
+								<div>
+									<input
+										type="radio"
+										id="gender"
+										name="gender"
+										value="Female"
+										checked />
+									<span>Female</span>
+								</div>
+								<div>
+									<input
+										type="radio"
+										id="gender"
+										name="gender"
+										value="Female" />
+									<span>Male</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="input__box">
+							<p class="input__text">Password</p>
+							<div class="password__container">
+								<input
+									type="password"
+									class="input__field"
+									id="register__password"
+									name="password"
+									placeholder="ex: ******" />
+								<img
+									class="show__hide__password"
+									src="../assets/img/icon/hide__icon.svg" />
+							</div>
+							<p id="register__password_error_msg" class="error__message">
+								Password is not match
+							</p>
+						</div>
+
+						<div class="input__box">
+							<p class="input__text">Confirm Password</p>
+							<div class="password__container">
+								<input
+									type="password"
+									class="input__field"
+									id="register__confirm__password"
+									name="password"
+									placeholder="ex: ******" />
+								<img
+									class="show__hide__password"
+									src="../assets/img/icon/hide__icon.svg" />
+							</div>
+							<p
+								id="register__confirm__password_error_msg"
+								class="error__message">
+								Password is not match
+							</p>
+						</div>
+
+						<div class="checkbox__container">
+							<div>
+								<div class="flex">
+									<input
+										type="checkbox"
+										id="update_checkbox"
+										class="checkbox_input"
+										name="update_checkbox" />
+									<span>
+										Send me Artsy Collective new arrival updates, offers, and
+										more.
+									</span>
+								</div>
+							</div>
+
+							<div>
+								<div class="flex center">
+									<input
+										type="checkbox"
+										id="update_checkbox"
+										class="checkbox_input"
+										name="update_checkbox" />
+									<span>
+										I agree to Artsy Collective <u>Terms & Conditions</u> and
+										<u>Privacy Policy</u>.
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="input__box__register">
+						<input type="button" class="btn_gold" value="Create Account" />
+					</div>
+
+					<div class="link__new__customer">
+						<span>Already have accout?</span>
+						<a href="./">Sign In</a>
+					</div>
+				</form>
+			</div>
+
 			<section class="hero">
 				<div class="hero--left">
 					<div class="hero__title">
