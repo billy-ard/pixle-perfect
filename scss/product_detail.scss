@@ -92,6 +92,13 @@ input[type="radio"]:checked + .radio-btn {
 	}
 }
 
+.wrapper__header__dropdown {
+	@include lg {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
 .image__box {
 	@include lg {
 		width: 317px;
@@ -161,12 +168,21 @@ input[type="radio"]:checked + .radio-btn {
 .header__nav--web a {
 	color: $black;
 	text-decoration: none;
+	font-family: $raleway;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: 0em;
+	text-align: left;
 }
 
 .header__nav--web a:hover {
 	text-decoration: underline;
 	text-underline-offset: 10px;
 	text-decoration-color: $gold;
+	font-weight: 600;
+	line-height: 16px;
+	letter-spacing: 0em;
 }
 
 .header__icon--right {
@@ -245,8 +261,24 @@ input[type="radio"]:checked + .radio-btn {
 	margin-bottom: 24px;
 }
 
+.menu__item--desktop a {
+	font-family: $raleway;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: black;
+	text-decoration: none;
+}
+
+.menu__item--desktop a:hover {
+	color: $gold;
+}
+
 .menu__image__collection {
 	display: flex;
+	justify-content: center;
 	gap: 24px;
 	text-align: center;
 }
@@ -254,6 +286,12 @@ input[type="radio"]:checked + .radio-btn {
 .menu__image__item {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+}
+
+.menu__image__item span {
+	text-align: center;
+	margin-top: 8px;
 }
 
 .header__menu--top {
@@ -586,6 +624,12 @@ input[type="radio"]:checked + .radio-btn {
 
 	@include lg {
 		font-size: 12px;
+		font-family: $raleway;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 16px;
+		letter-spacing: 0em;
+		text-align: center;
 	}
 }
 
@@ -597,6 +641,12 @@ input[type="radio"]:checked + .radio-btn {
 
 	@include lg {
 		font-size: 12px;
+		font-family: $raleway;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 16px;
+		letter-spacing: 0em;
+		text-align: center;
 	}
 }
 
@@ -678,7 +728,16 @@ input[type="radio"]:checked + .radio-btn {
 	flex-direction: row;
 	justify-content: right;
 	align-items: center;
-	gap: 48px;
+	gap: 77px;
+}
+
+.box__header span {
+	font-family: $raleway;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: left;
 }
 
 .small__thumbnail {

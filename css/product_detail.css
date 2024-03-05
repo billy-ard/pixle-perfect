@@ -624,6 +624,13 @@ input[type=radio]:checked + .radio-btn {
 }
 
 @media (min-width: 992px) {
+  .wrapper__header__dropdown {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
   .image__box {
     width: 317px;
   }
@@ -694,12 +701,21 @@ input[type=radio]:checked + .radio-btn {
 .header__nav--web a {
   color: #333333;
   text-decoration: none;
+  font-family: "Raleway", sans-sherif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .header__nav--web a:hover {
   text-decoration: underline;
   text-underline-offset: 10px;
   text-decoration-color: #ca8f48;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0em;
 }
 
 .header__icon--right {
@@ -782,8 +798,24 @@ input[type=radio]:checked + .radio-btn {
   margin-bottom: 24px;
 }
 
+.menu__item--desktop a {
+  font-family: "Raleway", sans-sherif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+}
+
+.menu__item--desktop a:hover {
+  color: #ca8f48;
+}
+
 .menu__image__collection {
   display: flex;
+  justify-content: center;
   gap: 24px;
   text-align: center;
 }
@@ -791,6 +823,12 @@ input[type=radio]:checked + .radio-btn {
 .menu__image__item {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.menu__image__item span {
+  text-align: center;
+  margin-top: 8px;
 }
 
 .header__menu--top {
@@ -1136,6 +1174,12 @@ input[type=radio]:checked + .radio-btn {
 @media (min-width: 992px) {
   .gold__btn {
     font-size: 12px;
+    font-family: "Raleway", sans-sherif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
   }
 }
 
@@ -1148,6 +1192,12 @@ input[type=radio]:checked + .radio-btn {
 @media (min-width: 992px) {
   .white__btn {
     font-size: 12px;
+    font-family: "Raleway", sans-sherif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
   }
 }
 
@@ -1232,7 +1282,16 @@ input[type=radio]:checked + .radio-btn {
   flex-direction: row;
   justify-content: right;
   align-items: center;
-  gap: 48px;
+  gap: 77px;
+}
+
+.box__header span {
+  font-family: "Raleway", sans-sherif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .small__thumbnail {

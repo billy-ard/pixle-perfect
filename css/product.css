@@ -882,12 +882,6 @@ main {
   justify-content: space-between;
   margin-top: 16px;
 }
-@media (min-width: 992px) {
-  .content__list {
-    gap: 16px;
-  }
-}
-
 .content__count {
   width: 100%;
   margin: 0 auto;
@@ -949,7 +943,7 @@ main {
 
 .content__type {
   position: absolute;
-  bottom: 10px;
+  bottom: 18px;
   background-color: rgba(130, 130, 130, 0.5019607843);
   padding: 2px 8px;
   opacity: 0.9;

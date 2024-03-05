@@ -373,7 +373,7 @@ main {
 	margin-top: 16px;
 
 	@include lg {
-		gap: 16px;
+		// gap: 16px;
 	}
 }
 
@@ -430,7 +430,7 @@ main {
 
 .content__type {
 	position: absolute;
-	bottom: 10px;
+	bottom: 18px;
 	background-color: #82828280;
 	padding: 2px 8px;
 	opacity: 0.9;
