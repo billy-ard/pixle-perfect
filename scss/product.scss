@@ -373,7 +373,7 @@ main {
 	margin-top: 16px;
 
 	@include lg {
-		// gap: 16px;
+		gap: 16px;
 	}
 }
 
@@ -392,8 +392,8 @@ main {
 	height: 289px;
 
 	@include lg {
-		width: 244px;
-		height: 400px;
+		width: calc(33.33% - 16px);
+		height: 50%;
 	}
 }
 
@@ -402,15 +402,10 @@ main {
 }
 
 .desktop__only {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	display: none;
 
-	@include sm {
-		display: none;
-	}
 	@include lg {
-		display: flex;
+		display: block;
 	}
 }
 
@@ -423,8 +418,8 @@ main {
 	height: 213px;
 
 	@include lg {
-		width: 244px;
-		height: 325px;
+		width: 100%;
+		height: 100%;
 	}
 }
 
@@ -512,7 +507,7 @@ main {
 	text-align: left;
 
 	@include lg {
-		font-size: 16px;
+		font-size: 15px;
 		font-weight: 700;
 		line-height: 19px;
 		letter-spacing: 0em;

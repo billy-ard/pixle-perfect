@@ -353,6 +353,12 @@ input[type="checkbox"]:checked {
 	border: 1px solid $gray;
 }
 
+.input__field_login {
+	padding: 12px;
+	width: 330px;
+	border: 1px solid $gray;
+}
+
 .input__field--half {
 	padding: 12px;
 	width: auto;
@@ -565,6 +571,7 @@ h2 {
 
 .collections__body__content img {
 	margin-bottom: 1em;
+	width: 100%;
 
 	@include lg {
 		width: 100%;

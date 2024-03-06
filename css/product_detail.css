@@ -547,7 +547,7 @@ main {
 @media (min-width: 992px) {
   main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 24px;
     justify-content: space-between;
     margin: 0 64px 64px 64px;
@@ -627,6 +627,12 @@ input[type=radio]:checked + .radio-btn {
   .wrapper__header__dropdown {
     display: flex;
     flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+  .main__box {
+    width: calc(100% - 235px);
   }
 }
 
@@ -928,7 +934,7 @@ input[type=radio]:checked + .radio-btn {
 
 @media (min-width: 992px) {
   .description {
-    width: 424px;
+    width: calc(100% - 317px);
   }
 }
 
@@ -1074,7 +1080,7 @@ input[type=radio]:checked + .radio-btn {
 
 @media (min-width: 992px) {
   .specification {
-    width: 235px;
+    min-width: 235px;
   }
 }
 

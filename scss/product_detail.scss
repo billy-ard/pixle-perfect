@@ -18,9 +18,10 @@ input[type="radio"] {
 main {
 	padding-top: 57px;
 	margin: 0px 22px;
+
 	@include lg {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		gap: 24px;
 		justify-content: space-between;
 		margin: 0 64px 64px 64px;
@@ -96,6 +97,12 @@ input[type="radio"]:checked + .radio-btn {
 	@include lg {
 		display: flex;
 		flex-direction: row;
+	}
+}
+
+.main__box {
+	@include lg {
+		width: calc(100% - $spesification_width);
 	}
 }
 
@@ -388,7 +395,7 @@ input[type="radio"]:checked + .radio-btn {
 
 .description {
 	@include lg {
-		width: 424px;
+		width: calc(100% - 317px);
 	}
 }
 
@@ -529,7 +536,7 @@ input[type="radio"]:checked + .radio-btn {
 
 .specification {
 	@include lg {
-		width: 235px;
+		min-width: $spesification_width;
 	}
 }
 
